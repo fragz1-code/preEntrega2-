@@ -1,0 +1,71 @@
+/* generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #111;
+    color: white;
+}
+
+/* encabezados */
+h1, h2 {
+    color: #00bcd4;
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* secciones */
+section {
+    background-color: #1e1e1e;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+/* texto nosotros */
+.nosotros {
+    color: aqua;
+}
+
+/* footer */
+.derechos {
+    color: violet;
+    text-align: center;
+    padding: 15px;
+}
+
+/* contenedor de productos */
+.productos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* cajas de productos */
+.producto {
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* logo */
+.logo img {
+    width: 120px;
+    margin: 10px;
+}
+
+/* media query mobile */
+@media (max-width: 600px) {
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .producto {
+        width: 100%;
+    }
+
+}
