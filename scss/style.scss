@@ -2,15 +2,14 @@
 @import "mixins";
 @import "productos";
 
-body {
-  background-color: $color-fondo;
-  color: rgb(250, 0, 0);
-}body{
+body{
   font-family: Arial, sans-serif;
   margin: 0;
   background: linear-gradient(135deg, #111, #1b1b1b);
   color: white;
-}h1{
+}
+
+h1{
   font-size: 40px;
   text-align: center;
   margin-top: 30px;
@@ -21,7 +20,32 @@ h2{
   text-align: center;
   color: #00bcd4;
   margin-bottom: 20px;
-}footer{
+}
+
+.presentacion{
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg,#0f0f0f,#1b1b1b);
+
+  h1{
+    font-size: 48px;
+    letter-spacing: 2px;
+  }
+
+  p{
+    max-width: 700px;
+    margin: auto;
+    color: #ccc;
+  }
+}
+
+.logo img{
+  width: 120px;
+  height: auto;
+  margin: 10px;
+}
+
+footer{
   margin-top: 40px;
   background: #0d0d0d;
   padding: 20px;
@@ -32,19 +56,4 @@ h2{
 .derechos{
   color: #aaa;
   font-size: 14px;
-}.presentacion{
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg,#0f0f0f,#1b1b1b);
-}
-
-.presentacion h1{
-  font-size: 48px;
-  letter-spacing: 2px;
-}
-
-.presentacion p{
-  max-width: 700px;
-  margin: auto;
-  color: #ccc;
 }
