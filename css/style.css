@@ -1,99 +1,22 @@
-/* GENERALES */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #111;
-    color: white;
-}
-
-/* TITULOS */
-h1, h2 {
-    color: #00bcd4;
-    text-align: center;
-    margin: 15px 0;
-}
-
-/* SECCIONES */
-section {
-    background-color: #1e1e1e;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #333;
-}
-
-/* TEXTO NOSOTROS */
-.nosotros {
-    color: aqua;
-}
-
-/* FOOTER */
-.derechos {
-    color: violet;
-    text-align: center;
-    padding: 15px;
-}
-
-/* LOGO */
-.logo img {
-    width: 120px;
-    margin: 10px;
-}
-
-/* CONTENEDOR PRODUCTOS */
 .productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-/* TARJETAS PRODUCTO */
 .producto {
-    background-color: #1c1c1c;
-    padding: 15px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
 }
-
-/* IMAGEN PRODUCTO */
 .producto img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
-/* TEXTO PRODUCTO */
-.producto p {
-    font-size: 14px;
-    color: #ccc;
+body {
+  background-color: #111;
+  color: rgb(250, 0, 0);
 }
 
-/* EFECTO HOVER */
-.producto:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
-}
-
-/* TABLET */
-@media (max-width: 768px) {
-
-    .productos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-
-    section {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    .productos {
-        grid-template-columns: 1fr;
-    }
-
-}
+/*# sourceMappingURL=style.css.map */
