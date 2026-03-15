@@ -1,0 +1,14 @@
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.producto {
+  @include tarjeta;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+}
