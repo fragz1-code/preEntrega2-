@@ -14,9 +14,57 @@
   border-radius: 8px;
 }
 
+.producto {
+  background-color: #1c1c1c;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.producto:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+.producto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 body {
   background-color: #111;
   color: rgb(250, 0, 0);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #111, #1b1b1b);
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  text-align: center;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 40px;
+  background: #0d0d0d;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+.derechos {
+  color: #aaa;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
