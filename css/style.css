@@ -67,4 +67,21 @@ footer {
   font-size: 14px;
 }
 
+.presentacion {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
+}
+
+.presentacion h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
+.presentacion p {
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+}
+
 /*# sourceMappingURL=style.css.map */
