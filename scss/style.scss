@@ -3,7 +3,8 @@
 @import "mixins";
 @import "productos";
 
-// GENERALES
+
+// RESET Y ESTILOS GENERALES
 * {
   box-sizing: border-box;
 }
@@ -15,12 +16,14 @@ body {
   color: white;
 }
 
+/* Imágenes adaptables */
 img {
   max-width: 100%;
   height: auto;
 }
 
-// TITULOS
+
+// TÍTULOS
 h1 {
   font-size: 40px;
   text-align: center;
@@ -34,7 +37,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-// PRESENTACION
+
+// SECCIÓN PRESENTACIÓN
 .presentacion {
   text-align: center;
   padding: 80px 20px;
@@ -51,20 +55,32 @@ h2 {
   }
 }
 
+
 // LOGO
 .logo img {
   width: 120px;
   margin: 10px;
 }
 
-// CONTENEDOR
+
+// CONTENEDORES
 .contenedor {
   max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
 }
 
-// CARDS
+/* Secciones generales */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 12px;
+}
+
+
+// TARJETAS
 .card {
   background: linear-gradient(160deg, #1a1a1a, #0f0f0f);
   padding: 30px;
@@ -89,22 +105,33 @@ h2 {
   color: #00e5ff;
 }
 
-// FORM
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
+
+// FORMULARIO (estructura con grid)
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-/* Labels */
+/* Contenedor de cada campo */
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Elementos que ocupan todo el ancho */
+.full {
+  grid-column: 1 / -1;
+}
+
+/* Etiquetas */
 label {
   font-size: 14px;
   color: #00e5ff;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
-/* Inputs */
+/* Campos de entrada */
 input, textarea {
   width: 100%;
   padding: 12px;
@@ -114,17 +141,24 @@ input, textarea {
   color: white;
 }
 
-/* Textarea */
+/* Área de texto */
 textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-/* Botón centrado */
+/* Botón */
 button {
   margin-top: 10px;
   width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #00bcd4, #00e5ff);
+  font-weight: bold;
+  cursor: pointer;
 }
+
 
 // PRODUCTOS
 .productos {
@@ -133,14 +167,6 @@ button {
   gap: 20px;
 }
 
-// SECTION
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #1c1c1c;
-  border-radius: 12px;
-}
 
 // FOOTER
 footer {
@@ -155,18 +181,25 @@ footer {
   font-size: 14px;
 }
 
-// Responsive //
 
-/* TABLET */
+// RESPONSIVE
+
+/* Tablet */
 @media (max-width: 768px) {
   .productos {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* CELULAR */
+/* Celular */
 @media (max-width: 480px) {
+
   .productos {
+    grid-template-columns: 1fr;
+  }
+
+  /* El formulario pasa a una sola columna */
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
