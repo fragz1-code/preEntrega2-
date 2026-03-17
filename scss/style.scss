@@ -1,79 +1,77 @@
+// IMPORTS
 @import "variables";
 @import "mixins";
 @import "productos";
 
-body{
+// GENERALES
+* {
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: linear-gradient(135deg, #111, #1b1b1b);
   color: white;
 }
 
-h1{
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// TITULOS
+h1 {
   font-size: 40px;
   text-align: center;
   margin-top: 30px;
   letter-spacing: 2px;
 }
 
-h2{
+h2 {
   text-align: center;
   color: #00bcd4;
   margin-bottom: 20px;
 }
 
-.presentacion{
+// PRESENTACION
+.presentacion {
   text-align: center;
   padding: 80px 20px;
   background: linear-gradient(135deg,#0f0f0f,#1b1b1b);
 
-  h1{
+  h1 {
     font-size: 48px;
-    letter-spacing: 2px;
   }
 
-  p{
+  p {
     max-width: 700px;
     margin: auto;
     color: #ccc;
   }
 }
 
-.logo img{
+// LOGO
+.logo img {
   width: 120px;
-  height: auto;
   margin: 10px;
 }
 
-footer{
-  margin-top: 40px;
-  background: #0d0d0d;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #222;
-}
-
-.derechos{
-  color: #aaa;
-  font-size: 14px;
-}img{
-  max-width: 100%;
-  height: auto;
-}/* CONTENEDOR GENERAL PARA SECCIONES */
+// CONTENEDOR
 .contenedor {
   max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
 }
 
-/* TARJETAS (para sobre nosotros / contacto) */
+// CARDS
 .card {
   background: linear-gradient(160deg, #1a1a1a, #0f0f0f);
   padding: 30px;
   border-radius: 15px;
   border: 1px solid #222;
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .card:hover {
@@ -81,21 +79,17 @@ footer{
   border-color: #00e5ff;
 }
 
-/* TEXTOS */
 .card p {
   color: #bbb;
   line-height: 1.7;
-  margin-bottom: 15px;
 }
 
-/* TITULO */
 .card h2 {
-  margin-bottom: 20px;
   font-size: 28px;
   color: #00e5ff;
 }
 
-/* FORMULARIO (CONTACTO) */
+// FORM
 form {
   display: flex;
   flex-direction: column;
@@ -108,27 +102,73 @@ input, textarea {
   border: 1px solid #333;
   background: #0d0d0d;
   color: white;
-  transition: 0.3s;
 }
 
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #00e5ff;
-  box-shadow: 0 0 8px rgba(0,229,255,0.3);
-}
-
-/* BOTON */
 button {
   padding: 12px;
-  border: none;
   border-radius: 8px;
   background: linear-gradient(90deg, #00bcd4, #00e5ff);
-  color: black;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-button:hover {
-  transform: scale(1.05);
+// PRODUCTOS
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+// SECTION
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 12px;
+}
+
+// FOOTER
+footer {
+  margin-top: 40px;
+  background: #0d0d0d;
+  padding: 20px;
+  text-align: center;
+}
+
+.derechos {
+  color: #aaa;
+  font-size: 14px;
+}
+
+// Responsive //
+
+/* TABLET */
+@media (max-width: 768px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CELULAR */
+@media (max-width: 480px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .presentacion {
+    padding: 50px 15px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  body {
+    padding: 10px;
+  }
 }
