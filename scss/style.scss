@@ -93,10 +93,20 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  width: 100%;
 }
 
+/* Labels */
+label {
+  font-size: 14px;
+  color: #00e5ff;
+  margin-bottom: 3px;
+}
+
+/* Inputs */
 input, textarea {
+  width: 100%;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #333;
@@ -104,12 +114,16 @@ input, textarea {
   color: white;
 }
 
+/* Textarea */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Botón centrado */
 button {
-  padding: 12px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #00bcd4, #00e5ff);
-  font-weight: bold;
-  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
 }
 
 // PRODUCTOS
